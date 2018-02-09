@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1350
     height: 620
-  m_MinSize: {x: 434, y: 492}
+  m_MinSize: {x: 509, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 37413
+  controlID: 129
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 232, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 37414
+  controlID: 130
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,13 +154,13 @@ MonoBehaviour:
     height: 349
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 10}
+  m_ActualView: {fileID: 11}
   m_Panes:
   - {fileID: 11}
   - {fileID: 10}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -204,15 +204,15 @@ MonoBehaviour:
     y: 0
     width: 308
     height: 620
-  m_MinSize: {x: 202, y: 221}
+  m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 15}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 15}
   - {fileID: 16}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -323,9 +323,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -7.979921, y: -14.47314, z: 133.1096}
+    m_Target: {x: 0.13180459, y: -15.557369, z: 133.05571}
     speed: 2
-    m_Value: {x: -7.979921, y: -14.47314, z: 133.1096}
+    m_Value: {x: 0.13180459, y: -15.557369, z: 133.05571}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -353,9 +353,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 67.69428
+    m_Target: 73.1784
     speed: 2
-    m_Value: 67.69428
+    m_Value: 73.1784
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -432,19 +432,18 @@ MonoBehaviour:
     m_ScenePaths: []
     m_ShowAllHits: 0
     m_SearchArea: 0
-    m_Folders:
-    - Assets/Sound
+    m_Folders: []
   m_ViewMode: 0
   m_StartGridSize: 16
   m_LastFolders: []
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: C:\Users\Lars\Documents\GitHub\Snake
+  m_LastProjectPath: C:\Users\Lars\Documents\GitHub\Classics\Snake
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 50270000
     m_LastClickedID: 10064
-    m_ExpandedIDs: 000000009e280000382900003e29000044290000
+    m_ExpandedIDs: 0000000048270000862700008c270000a2270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -472,7 +471,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000009e280000382900003e29000044290000
+    m_ExpandedIDs: 0000000048270000862700008c270000a2270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -590,23 +589,23 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7a290000
-    m_LastClickedID: 0
-    m_ExpandedIDs: 8c9ef1ffa2b8f1ff26bdf1ff3c92f2fffa81f3ff78bcf3ffe2c9f3ff08dcf3ff86f4f3ffbc1ef4ffd023f4ffc2cdf4ff64d0f4ff2066f6ff2a66f6ffd075f6ff76aaf6fff61bf8ff5a87f8ffa4bef9ff3037faff503afaff3623fbffe0e3fcffd2acfeff2ab3ffffd8f9ffff00000000
+    m_SelectedIDs: 0a280000
+    m_LastClickedID: 10250
+    m_ExpandedIDs: 9efbffff00000000e62700002c28000030280000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: Score
+      m_OriginalName: Score
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 10258
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 9}
     m_SearchString: 
