@@ -5,7 +5,7 @@ using UnityEngine;
 public class Apple : MonoBehaviour
 {
     private Vector2Int position;
-    private bool isAlive, stopped;
+    private bool isAlive, stopped, paused;
     public Texture2D texture;
 
 	// Use this for initialization
@@ -19,7 +19,7 @@ public class Apple : MonoBehaviour
 	// Update is called once per frame
 	void Update()
     {
-        if(!stopped)
+        if(!stopped && !paused)
         {
             if (!isAlive)
             {
@@ -32,15 +32,15 @@ public class Apple : MonoBehaviour
 
     private Vector2Int NewRandomPosition()
     {
-        float x = 10 * Random.Range(0.0f, 1.6f);
-        float y = 10 * Random.Range(0.0f, 1.6f);
+        float x = 10 * Random.Range(0.0f, 3.1f);
+        float y = 10 * Random.Range(0.0f, 3.1f);
 
         return new Vector2Int((int)x, (int)y);
     }
 
     void OnGUI()
     {
-        Graphics.DrawTexture(new Rect(position.x, -position.y, 1, -1), texture);
+        Graphics.DrawTexture(new Rect(-53 + position.x, -49 + position.y, 1, 1), texture);
     }
 
     public Vector2Int GetPosition()
@@ -60,7 +60,12 @@ public class Apple : MonoBehaviour
 
     public void Resume()
     {
-        stopped = false;
+        paused = false;
+    }
+
+    public void Pause()
+    {
+        paused = true;
     }
 
     public void Reset()

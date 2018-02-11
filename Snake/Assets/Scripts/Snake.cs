@@ -4,13 +4,26 @@ using UnityEngine;
 
 public class Snake : MonoBehaviour
 {
-    public int numberSegments;
+    //list of segments
     private List<Segment> segments;
+
+    //standart texture of segments
     public Texture2D segmentTexture;
+
+    //(old-)direction that snake moves (moved)
     private Direction dir, oldDir;
+
+    //timer for movement
     private double timer;
-    private bool addSegment, stopped;
+
+    //should we add a segment; is the game stopped?
+    private bool addSegment, stopped, paused;
+
+    //how many pixel moves in a second
     public double speed;
+
+    //with how many segment the snake starts
+    public int numberSegments;
 
     public enum Direction
     {
@@ -25,8 +38,8 @@ public class Snake : MonoBehaviour
 	// Use this for initialization
 	void Awake ()
     {
-        dir = oldDir = Direction.NONE;
-        timer = speed;
+        dir = oldDir = Direction.UP;
+        timer = 1/speed;
         addSegment = false;
         stopped = false;
 
@@ -40,7 +53,7 @@ public class Snake : MonoBehaviour
 	// Update is called once per frame
 	void Update()
     {
-        if (!stopped)
+        if (!stopped && !paused)
         {
             timer -= Time.deltaTime;
 
@@ -71,11 +84,11 @@ public class Snake : MonoBehaviour
                 switch (dir)
                 {
                     case Direction.UP:
-                        MoveAll(0, -1);
+                        MoveAll(0, 1);
                         break;
 
                     case Direction.DOWN:
-                        MoveAll(0, 1);
+                        MoveAll(0, -1);
                         break;
 
                     case Direction.LEFT:
@@ -96,7 +109,7 @@ public class Snake : MonoBehaviour
                         break;
                 }
 
-                timer = speed;
+                timer = 1/speed;
             }
         }
     }
@@ -130,8 +143,8 @@ public class Snake : MonoBehaviour
         foreach (Segment s in segments)
         {
             float xPosition = s.X;
-            float yPosition = -s.Y;
-            Graphics.DrawTexture(new Rect(xPosition, yPosition, 1, -1), segmentTexture);
+            float yPosition = s.Y;
+            Graphics.DrawTexture(new Rect(-53 + xPosition, -49 + yPosition, 1, 1), segmentTexture);
         }
     }
 
@@ -172,13 +185,18 @@ public class Snake : MonoBehaviour
 
     public void Resume()
     {
-        stopped = false;
+        paused = false;
+    }
+
+    public void Pause()
+    {
+        paused = true;
     }
 
     public void Reset()
     {
-        dir = oldDir = Direction.NONE;
-        timer = speed;
+        dir = oldDir = Direction.UP;
+        timer = 1/speed;
         addSegment = false;
         stopped = false;
 
